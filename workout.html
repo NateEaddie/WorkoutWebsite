@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="workoutStyles.css">
+        <script type="text/javascript" src="workoutJS.js"></script>
+        <script type="text/javascript" src="exercises.js"></script>
+    </head>
+    
+    <body>
+    <div id ="wrapper">
+        <header class = "home">
+            <h1 id="banner-title">Workout Lottery</h1>
+            <h2 id="banner-items"><a href="workoutLotteryAbout.html">About</a></h2>
+            <h2 id="banner-items"><a href="workoutLotteryList.html">Workout List</a></h2>
+            <h2 id="banner-items">Workout Plans</h2>
+        </header>
+        <main role="main" class="home-main">
+            <p class="home-main">What kind of workout or exercise do you want?</p>
+            <select class="home-main" onchange="getUserSelections()" id ="dropdown">
+                <option disabled selected value> -- select an option -- </option>
+                <option value = "pull">Pull</option>
+                <option value ="push">Push</option>
+                <option value ="legs">Legs</option>
+                <option value ="press">Press</option>
+            </select>
+            
+            <p class="home-main">How many individual exercises do you want?</p>
+            <input class ="home-main" id = "num-exercises" type="text" placeholder="Enter Here" onchange="check()" >
+
+            <!---<h2 class = "home-main" id = "showButton">GET YOUR WORKOUT</h2>--->
+            <button class = "home-main" id = "showButton1" type = "button" onclick="lottoResult()">Get your exercises!!</button>
+
+
+        </main>
+
+        <section id="results">
+                <h1 id="list-header">Exercises!</h1>
+                <ul id="random-list"></ul>
+    
+        </section>
+
+
+
+        <footer>
+            <h4>Contact</h4>
+        </footer>
+
+    </div>
+    </body>
+</html>
+
